@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Hub | Dt. Darshni Dedhia & Dt. Mitali Savla — Heal Through Foods</title>
+    <meta name="description" content="Health Hub founded by Dietitians Darshni Dedhia & Mitali Savla. Heal through foods - not fad diets. Online consultations for PCOS, Diabetes, Gut Health & Weight Management.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        sage: {
+                            50: '#f4f7f4',
+                            100: '#e3ebe3',
+                            200: '#c7d8c7',
+                            300: '#9ebba0',
+                            400: '#729975',
+                            500: '#527c56',
+                            600: '#3e6242',
+                            700: '#334f36',
+                            800: '#2b402d',
+                            900: '#243526',
+                        },
+                        cream: '#FAF7F2',
+                        terracotta: '#C86D51',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAF7F2;
+            color: #243526;
+        }
+        .glass-nav {
+            background: rgba(250, 247, 242, 0.92);
+            backdrop-filter: blur(12px);
+        }
+        .insta-gradient {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-sage-200 selection:text-sage-900">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-sage-800 text-sage-50 text-xs sm:text-sm py-2.5 px-4 text-center font-medium">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-1">
+            <span>🌿 <strong>Heal through foods - not fad diets</strong></span>
+            <span class="hidden sm:inline text-sage-400">|</span>
+            <span>📍 Worldwide Online Consultations Available</span>
+            <a href="https://www.instagram.com/healthhub_dt.darshni_mitali/" target="_blank" rel="noopener noreferrer" class="underline hover:text-amber-200 inline-flex items-center gap-1">
+                <i class="fa-brands fa-instagram"></i> @healthhub_dt.darshni_mitali
+            </a>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-sage-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-2xl bg-sage-600 text-white flex items-center justify-center text-xl shadow-md group-hover:bg-sage-700 transition">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-2xl font-bold tracking-tight text-sage-900 block leading-none">Health Hub</span>
+                    <span class="text-xs text-sage-600 font-medium tracking-wide">Dt. Darshni & Dt. Mitali</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-sage-800">
+                <a href="#about" class="hover:text-sage-600 transition">About Us</a>
+                <a href="#programs" class="hover:text-sage-600 transition">Specialties</a>
+                <a href="#instagram-feed" class="hover:text-sage-600 transition flex items-center gap-1.5">
+                    <i class="fa-brands fa-instagram text-pink-600"></i> Live Instagram Posts
+                </a>
+                <a href="#testimonials" class="hover:text-sage-600 transition">Approach</a>
+                <a href="#contact" class="hover:text-sage-600 transition">Contact</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:flex items-center gap-3">
+                <a href="#book-consultation" class="bg-sage-600 hover:bg-sage-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-sm hover:shadow transition flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Book Consultation</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2.5 rounded-xl text-sage-800 hover:bg-sage-100 focus:outline-none">
+                <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream border-b border-sage-200 px-4 pt-3 pb-6 space-y-3">
+            <a href="#about" class="mobile-link block py-2 px-3 rounded-lg font-medium text-sage-800 hover:bg-sage-100">About Founders</a>
+            <a href="#programs" class="mobile-link block py-2 px-3 rounded-lg font-medium text-sage-800 hover:bg-sage-100">Our Specialties</a>
+            <a href="#instagram-feed" class="mobile-link block py-2 px-3 rounded-lg font-medium text-sage-800 hover:bg-sage-100">Instagram Educational Feed</a>
+            <a href="#testimonials" class="mobile-link block py-2 px-3 rounded-lg font-medium text-sage-800 hover:bg-sage-100">Why Choose Us</a>
+            <a href="#contact" class="mobile-link block py-2 px-3 rounded-lg font-medium text-sage-800 hover:bg-sage-100">Contact Details</a>
+            <div class="pt-2">
+                <a href="#book-consultation" class="mobile-link w-full bg-sage-600 text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 shadow">
+                    <i class="fa-brands fa-whatsapp"></i> Book Online Consultation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-12 sm:py-20 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Hero Copy -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-sage-100 border border-sage-200 text-sage-800 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-sage-600 animate-pulse"></span>
+                        Founded by Dietitian Sisters Darshni Dedhia & Mitali Savla
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-sage-900 leading-tight">
+                        Heal through foods — <span class="italic text-sage-600 font-normal">not fad diets.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-sage-700 max-w-2xl leading-relaxed">
+                        Welcome to <strong>Health Hub</strong>. We believe nutrition shouldn't mean starving yourself or giving up your favorite home-cooked Indian meals. Transform your health sustainably with personalized, root-cause nutrition plans tailored to your lifestyle.
+                    </p>
+
+                    <!-- Specialty Pills -->
+                    <div class="flex flex-wrap gap-2.5 pt-1">
+                        <span class="bg-white border border-sage-200 px-4 py-2 rounded-xl text-sm font-semibold text-sage-800 shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-venus text-terracotta"></i> PCOS Management
+                        </span>
+                        <span class="bg-white border border-sage-200 px-4 py-2 rounded-xl text-sm font-semibold text-sage-800 shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-droplet text-rose-500"></i> Diabetes Care
+                        </span>
+                        <span class="bg-white border border-sage-200 px-4 py-2 rounded-xl text-sm font-semibold text-sage-800 shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-leaf text-sage-600"></i> Gut Health
+                        </span>
+                        <span class="bg-white border border-sage-200 px-4 py-2 rounded-xl text-sm font-semibold text-sage-800 shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-scale-balanced text-amber-600"></i> Weight Management
+                        </span>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-3">
+                        <a href="#book-consultation" class="bg-sage-600 hover:bg-sage-700 text-white font-semibold px-7 py-4 rounded-2xl shadow-lg shadow-sage-600/20 transition flex items-center justify-center gap-2.5 text-base">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Start Your Healing Journey</span>
+                        </a>
+                        <a href="https://www.instagram.com/healthhub_dt.darshni_mitali/" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-sage-50 text-sage-900 border border-sage-300 font-semibold px-7 py-4 rounded-2xl transition flex items-center justify-center gap-2.5 text-base">
+                            <i class="fa-brands fa-instagram text-xl text-pink-600"></i>
+                            <span>Visit Our Instagram</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Contact Strip -->
+                    <div class="pt-4 border-t border-sage-200/80 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                        <div class="flex items-center gap-3 bg-white/70 p-3 rounded-xl border border-sage-200/60">
+                            <div class="w-9 h-9 rounded-lg bg-sage-100 text-sage-700 flex items-center justify-center font-bold">DD</div>
+                            <div>
+                                <div class="font-bold text-sage-900">Dt. Darshni Dedhia</div>
+                                <a href="tel:+919833343563" class="text-sage-600 hover:underline font-medium">+91 98333 43563</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white/70 p-3 rounded-xl border border-sage-200/60">
+                            <div class="w-9 h-9 rounded-lg bg-sage-100 text-sage-700 flex items-center justify-center font-bold">MS</div>
+                            <div>
+                                <div class="font-bold text-sage-900">Dt. Mitali Savla</div>
+                                <a href="tel:+919833909196" class="text-sage-600 hover:underline font-medium">+91 98339 09196</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative bg-white p-6 sm:p-8 rounded-3xl shadow-xl border border-sage-100">
+                        <div class="absolute -top-4 -right-4 bg-terracotta text-white text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full shadow-md">
+                            📍 Online Consultation
+                        </div>
+
+                        <!-- Profile Header -->
+                        <div class="flex items-center gap-4 pb-6 border-b border-sage-100">
+                            <div class="w-16 h-16 rounded-full p-0.5 insta-gradient flex-shrink-0">
+                                <div class="w-full h-full bg-white rounded-full flex items-center justify-center text-sage-700 text-2xl font-serif font-bold">
+                                    HH
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-1.5">
+                                    <h2 class="font-bold text-lg text-sage-900">healthhub_dt.darshni_mitali</h2>
+                                    <i class="fa-solid fa-circle-check text-blue-500 text-sm"></i>
+                                </div>
+                                <p class="text-xs text-sage-600 font-medium">Founded by Dietitians Darshni & Mitali</p>
+                                <p class="text-xs text-sage-700 mt-1">🌿 Heal through foods - not fad diets</p>
+                            </div>
+                        </div>
+
+                        <!-- Core Philosophy Highlights -->
+                        <div class="py-6 space-y-4">
+                            <div class="bg-sage-50 p-4 rounded-2xl border border-sage-100 flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-sage-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-bowl-rice"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-sage-900 text-sm">100% Home-Cooked Indian Meals</h3>
+                                    <p class="text-xs text-sage-700 mt-1">No expensive supplements, exotic powders, or restrictive starvation plans. Just real kitchen nourishment.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-sage-50 p-4 rounded-2xl border border-sage-100 flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-terracotta text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-sage-900 text-sm">Root-Cause Healing</h3>
+                                    <p class="text-xs text-sage-700 mt-1">Targeted guidance for hormonal balance (PCOS), blood sugar regulation, gut microbiome recovery, and sustainable fat loss.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-sage-50 p-4 rounded-2xl border border-sage-100 flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-comments"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-sage-900 text-sm">Constant WhatsApp Support</h3>
+                                    <p class="text-xs text-sage-700 mt-1">Direct guidance, travel tips, festival eating strategies, and regular check-ins with Dt. Darshni & Dt. Mitali.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Direct Connect Bar -->
+                        <div class="pt-2 flex flex-col sm:flex-row gap-2.5">
+                            <a href="https://wa.me/919833343563?text=Hi%20Dt.%20Darshni%2C%20I%20would%20like%20to%20inquire%20about%20an%20online%20nutrition%20consultation%20at%20Health%20Hub." target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-3 px-4 rounded-xl text-center transition flex items-center justify-center gap-1.5">
+                                <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Darshni
+                            </a>
+                            <a href="https://wa.me/919833909196?text=Hi%20Dt.%20Mitali%2C%20I%20would%20like%20to%20inquire%20about%20an%20online%20nutrition%20consultation%20at%20Health%20Hub." target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-3 px-4 rounded-xl text-center transition flex items-center justify-center gap-1.5">
+                                <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Mitali
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Sister Duo Section -->
+    <section id="about" class="py-16 sm:py-24 bg-white border-y border-sage-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-sage-600 bg-sage-100 px-3.5 py-1.5 rounded-full">Meet The Founders</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sage-900 mt-4">Two Sisters, One Mission: Mindful & Fad-Free Nutrition</h2>
+                <p class="text-sage-700 mt-3 text-base sm:text-lg">
+                    Founded by qualified Dietitian sisters <strong>Darshni Dedhia</strong> and <strong>Mitali Savla</strong>, Health Hub was created to help people build a joyful, guilt-free relationship with everyday food.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Darshni Card -->
+                <div class="bg-cream rounded-3xl p-7 sm:p-9 border border-sage-200 shadow-sm flex flex-col justify-between card-hover">
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-2xl bg-sage-600 text-white flex items-center justify-center font-serif text-2xl font-bold shadow">
+                                    DD
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-wider text-terracotta">Co-Founder & Dietitian</span>
+                                    <h3 class="font-serif text-2xl font-bold text-sage-900">Dt. Darshni Dedhia</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sage-700 text-sm sm:text-base leading-relaxed mb-6">
+                            Passionate about clinical and therapeutic nutrition, Dt. Darshni specializes in helping clients reverse lifestyle disorders like PCOS, insulin resistance, and chronic digestive discomfort using simple kitchen ingredients and balanced meal timing.
+                        </p>
+                    </div>
+                    <div class="pt-5 border-t border-sage-200 flex flex-wrap items-center justify-between gap-3">
+                        <div class="text-sm font-semibold text-sage-900 flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-sage-600"></i> +91 98333 43563
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="tel:+919833343563" class="px-4 py-2 rounded-xl bg-white border border-sage-300 text-sage-800 text-xs font-semibold hover:bg-sage-100 transition">
+                                Call Now
+                            </a>
+                            <a href="https://wa.me/919833343563?text=Hi%20Dt.%20Darshni%2C%20I%20want%20to%20know%20more%20about%20Health%20Hub%20diet%20plans." target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-sage-600 text-white text-xs font-semibold hover:bg-sage-700 transition flex items-center gap-1.5">
+                                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mitali Card -->
+                <div class="bg-cream rounded-3xl p-7 sm:p-9 border border-sage-200 shadow-sm flex flex-col justify-between card-hover">
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-2xl bg-terracotta text-white flex items-center justify-center font-serif text-2xl font-bold shadow">
+                                    MS
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-wider text-sage-600">Co-Founder & Dietitian</span>
+                                    <h3 class="font-serif text-2xl font-bold text-sage-900">Dt. Mitali Savla</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sage-700 text-sm sm:text-base leading-relaxed mb-6">
+                            Dedicated to sustainable weight management and metabolic wellness, Dt. Mitali empowers busy professionals, homemakers, and students with practical, easy-to-follow nutrition plans that fit effortlessly into family routines.
+                        </p>
+                    </div>
+                    <div class="pt-5 border-t border-sage-200 flex flex-wrap items-center justify-between gap-3">
+                        <div class="text-sm font-semibold text-sage-900 flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-sage-600"></i> +91 98339 09196
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="tel:+919833909196" class="px-4 py-2 rounded-xl bg-white border border-sage-300 text-sage-800 text-xs font-semibold hover:bg-sage-100 transition">
+                                Call Now
+                            </a>
+                            <a href="https://wa.me/919833909196?text=Hi%20Dt.%20Mitali%2C%20I%20want%20to%20know%20more%20about%20Health%20Hub%20diet%20plans." target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-sage-600 text-white text-xs font-semibold hover:bg-sage-700 transition flex items-center gap-1.5">
+                                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties / Programs Section -->
+    <section id="programs" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-sage-600 bg-sage-100 px-3.5 py-1.5 rounded-full">What We Specialize In</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sage-900 mt-4">Personalized Nutrition Programs</h2>
+                <p class="text-sage-700 mt-3 text-base sm:text-lg">
+                    Every body is unique. Our online consultation programs are tailored to your blood markers, medical history, food preferences, and daily schedule.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Specialty 1: PCOS -->
+                <div class="bg-white rounded-3xl p-7 border border-sage-200/80 shadow-sm flex flex-col justify-between card-hover">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-rose-50 text-terracotta flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-venus"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-sage-900">PCOS & Hormonal Balance</h3>
+                        <p class="text-sm text-sage-700 mt-3 leading-relaxed">
+                            Regulate irregular periods, manage stubborn PCOS weight, reduce hormonal acne & hair fall, and improve insulin sensitivity naturally with seed cycling and anti-inflammatory foods.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-xs text-sage-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600"></i> Cycle-syncing nutrition</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600"></i> Craving & energy control</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600"></i> Fertility & thyroid support</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectProgramForBooking('PCOS Management')" class="mt-6 w-full py-3 px-4 rounded-xl bg-sage-50 hover:bg-sage-600 hover:text-white text-sage-800 font-semibold text-xs transition flex items-center justify-center gap-2">
+                        <span>Inquire About PCOS Plan</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Specialty 2: Diabetes -->
+                <div class="bg-white rounded-3xl p-7 border border-sage-200/80 shadow-sm flex flex-col justify-between card-hover">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-sage-900">Diabetes Management</h3>
+                        <p class="text-sm text-sage-700 mt-3 leading-relaxed">
+                            Stabilize fasting and post-meal blood sugar levels and lower HbA1c without giving up rotis or rice. Ideal for Pre-diabetes, Type 2 Diabetes, and Gestational Diabetes.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-xs text-sage-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600"></i> Low-GI Indian meal pairings</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600"></i> Prevent sugar spikes & crashes</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600"></i> Sustainable HbA1c reduction</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectProgramForBooking('Diabetes Management')" class="mt-6 w-full py-3 px-4 rounded-xl bg-sage-50 hover:bg-sage-600 hover:text-white text-sage-800 font-semibold text-xs transition flex items-center justify-center gap-2">
+                        <span>Inquire About Diabetes Plan</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Specialty 3: Gut Health -->
+                <div class="bg-white rounded-3xl p-7 border border-sage-200/80 shadow-sm flex flex-col justify-between card-hover">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-sage-100 text-sage-700 flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-sage-900">Gut Health & Digestion</h3>
+                        <p class="text-sm text-sage-700 mt-3 leading-relaxed">
+                            Say goodbye to chronic bloating, hyperacidity, reflux, constipation, and IBS. We focus on healing your gut lining and rebuilding a thriving microbiome.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-xs text-sage-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600"></i> Natural prebiotic & probiotic foods</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600"></i> Relief from acidity & bloating</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600"></i> Trigger food identification</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectProgramForBooking('Gut Health Healing')" class="mt-6 w-full py-3 px-4 rounded-xl bg-sage-50 hover:bg-sage-600 hover:text-white text-sage-800 font-semibold text-xs transition flex items-center justify-center gap-2">
+                        <span>Inquire About Gut Plan</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Specialty 4: Weight Management -->
+                <div class="bg-white rounded-3xl p-7 border border-sage-200/80 shadow-sm flex flex-col justify-between card-hover">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-sage-900">Weight Management</h3>
+                        <p class="text-sm text-sage-700 mt-3 leading-relaxed">
+                            Achieve sustainable fat loss, inch loss, or healthy weight gain without crash dieting or rebound weight gain. Enjoy social outings while staying on track.
+                        </p>
+                        <ul class="mt-4 space-y-2 text-xs text-sage-700 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600"></i> No starvation or keto fads</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600"></i> Portion & metabolism mastery</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sage-600"></i> Post-pregnancy & bride/groom plans</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectProgramForBooking('Weight Management')" class="mt-6 w-full py-3 px-4 rounded-xl bg-sage-50 hover:bg-sage-600 hover:text-white text-sage-800 font-semibold text-xs transition flex items-center justify-center gap-2">
+                        <span>Inquire About Weight Plan</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE & CUSTOMIZABLE INSTAGRAM EDUCATIONAL FEED SECTION -->
+    <section id="instagram-feed" class="py-16 sm:py-24 bg-white border-y border-sage-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Instagram Profile Header Card -->
+            <div class="bg-cream rounded-3xl p-6 sm:p-8 border border-sage-200 mb-10 shadow-sm">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                    <div class="flex items-center gap-4 sm:gap-6">
+                        <a href="https://www.instagram.com/healthhub_dt.darshni_mitali/" target="_blank" rel="noopener noreferrer" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 insta-gradient flex-shrink-0 shadow-md hover:scale-105 transition">
+                            <div class="w-full h-full bg-white rounded-full flex flex-col items-center justify-center text-sage-800">
+                                <i class="fa-solid fa-seedling text-2xl text-sage-600"></i>
+                                <span class="text-[10px] font-bold tracking-tighter mt-0.5">HEALTH HUB</span>
+                            </div>
+                        </a>
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2">
+                                <h2 class="font-bold text-xl sm:text-2xl text-sage-900">@healthhub_dt.darshni_mitali</h2>
+                                <span class="bg-pink-100 text-pink-700 text-xs font-bold px-2.5 py-0.5 rounded-full">Official Instagram</span>
+                            </div>
+                            <p class="text-sm font-semibold text-sage-800 mt-1">Founded by Dietitians Darshni & Mitali</p>
+                            <p class="text-xs sm:text-sm text-sage-700 mt-1">
+                                🌿 Heal through foods - not fad diets • PCOS | Diabetes | Gut Health | Weight Management
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
+                        <a href="https://www.instagram.com/healthhub_dt.darshni_mitali/" target="_blank" rel="noopener noreferrer" class="flex-1 md:flex-initial insta-gradient text-white font-semibold px-6 py-3 rounded-xl shadow hover:opacity-95 transition flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                            <span>Follow on Instagram</span>
+                        </a>
+                        <button onclick="togglePostModal()" class="flex-1 md:flex-initial px-5 py-3 rounded-xl bg-sage-700 hover:bg-sage-800 text-white text-xs font-semibold transition flex items-center justify-center gap-2 shadow">
+                            <i class="fa-solid fa-plus-circle"></i>
+                            <span>+ Add / Manage New Insta Post</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Category Filter Pills -->
+                <div class="mt-7 pt-6 border-t border-sage-200/80 flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex flex-wrap gap-2" id="insta-filters">
+                        <button onclick="filterInstaPosts('all')" data-filter="all" class="insta-filter-btn bg-sage-700 text-white text-xs font-semibold px-4 py-2 rounded-full transition">
+                            All Posts & Reels
+                        </button>
+                        <button onclick="filterInstaPosts('pcos')" data-filter="pcos" class="insta-filter-btn bg-white border border-sage-200 text-sage-800 hover:bg-sage-100 text-xs font-semibold px-4 py-2 rounded-full transition">
+                            🌸 PCOS & Hormones
+                        </button>
+                        <button onclick="filterInstaPosts('gut')" data-filter="gut" class="insta-filter-btn bg-white border border-sage-200 text-sage-800 hover:bg-sage-100 text-xs font-semibold px-4 py-2 rounded-full transition">
+                            🌿 Gut Health Remedies
+                        </button>
+                        <button onclick="filterInstaPosts('diabetes')" data-filter="diabetes" class="insta-filter-btn bg-white border border-sage-200 text-sage-800 hover:bg-sage-100 text-xs font-semibold px-4 py-2 rounded-full transition">
+                            🩸 Diabetes Tips
+                        </button>
+                        <button onclick="filterInstaPosts('recipes')" data-filter="recipes" class="insta-filter-btn bg-white border border-sage-200 text-sage-800 hover:bg-sage-100 text-xs font-semibold px-4 py-2 rounded-full transition">
+                            🥗 Healthy Swaps & Recipes
+                        </button>
+                        <button onclick="filterInstaPosts('myths')" data-filter="myths" class="insta-filter-btn bg-white border border-sage-200 text-sage-800 hover:bg-sage-100 text-xs font-semibold px-4 py-2 rounded-full transition">
+                            💡 Myth vs. Fact
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Posts Grid Container -->
+            <div id="insta-feed-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamically rendered via JavaScript -->
+            </div>
+
+            <!-- Bottom CTA to View All Posts on Instagram -->
+            <div class="mt-10 text-center">
+                <a href="https://www.instagram.com/healthhub_dt.darshni_mitali/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-sage-100 hover:bg-sage-200 text-sage-900 font-semibold px-7 py-3.5 rounded-2xl transition text-sm">
+                    <i class="fa-brands fa-instagram text-pink-600 text-lg"></i>
+                    <span>Explore All Reels & Client Wins on @healthhub_dt.darshni_mitali</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Our Online Consultation Works -->
+    <section id="testimonials" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-sage-600 bg-sage-100 px-3.5 py-1.5 rounded-full">Simple 4-Step Process</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sage-900 mt-4">How Online Consultation Works</h2>
+                <p class="text-sage-700 mt-3 text-base sm:text-lg">
+                    Consult from the comfort of your home anywhere in India or worldwide via WhatsApp, Phone, or Video Call.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-7 rounded-3xl border border-sage-200/80 relative">
+                    <span class="text-4xl font-serif font-bold text-sage-200">01</span>
+                    <h3 class="font-bold text-lg text-sage-900 mt-2">Detailed Assessment</h3>
+                    <p class="text-sm text-sage-700 mt-2">We understand your medical history, blood reports, sleep cycle, gut health, daily schedule, and food preferences.</p>
+                </div>
+                <div class="bg-white p-7 rounded-3xl border border-sage-200/80 relative">
+                    <span class="text-4xl font-serif font-bold text-sage-200">02</span>
+                    <h3 class="font-bold text-lg text-sage-900 mt-2">Customized Food Plan</h3>
+                    <p class="text-sm text-sage-700 mt-2">Receive a practical, home-based meal plan with easy recipes—no fancy ingredients or separate cooking required.</p>
+                </div>
+                <div class="bg-white p-7 rounded-3xl border border-sage-200/80 relative">
+                    <span class="text-4xl font-serif font-bold text-sage-200">03</span>
+                    <h3 class="font-bold text-lg text-sage-900 mt-2">Weekly Progress Reviews</h3>
+                    <p class="text-sm text-sage-700 mt-2">Regular follow-ups with Dt. Darshni & Dt. Mitali to tweak your plan and keep your metabolism progressing smoothly.</p>
+                </div>
+                <div class="bg-white p-7 rounded-3xl border border-sage-200/80 relative">
+                    <span class="text-4xl font-serif font-bold text-sage-200">04</span>
+                    <h3 class="font-bold text-lg text-sage-900 mt-2">Lifelong Habits</h3>
+                    <p class="text-sm text-sage-700 mt-2">We educate you on portion balance and mindful eating so you maintain your results effortlessly for life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Online Consultation & Contact Section -->
+    <section id="book-consultation" class="py-16 sm:py-24 bg-sage-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Column: Direct Contact Details -->
+                <div id="contact" class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-sage-300 bg-sage-800 px-3.5 py-1.5 rounded-full">Get In Touch</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-4 leading-tight">
+                            Book Your Online Consultation Today
+                        </h2>
+                        <p class="text-sage-200 mt-3 text-sm sm:text-base leading-relaxed">
+                            Ready to heal through wholesome foods? Fill out the quick inquiry form or reach out directly to Dietitians Darshni Dedhia & Mitali Savla via WhatsApp, Phone, or Email.
+                        </p>
+                    </div>
+
+                    <!-- Contact Cards -->
+                    <div class="space-y-4">
+                        <!-- Darshni -->
+                        <div class="bg-sage-800/90 border border-sage-700 p-5 rounded-2xl flex items-center justify-between gap-4">
+                            <div>
+                                <div class="text-xs text-sage-300 font-semibold uppercase">Dietitian & Co-Founder</div>
+                                <div class="font-bold text-lg text-white">Dt. Darshni Dedhia</div>
+                                <a href="tel:+919833343563" class="text-sage-200 hover:text-white text-sm font-medium">+91 98333 43563</a>
+                            </div>
+                            <div class="flex gap-2">
+                                <a href="tel:+919833343563" aria-label="Call Darshni Dedhia" class="w-10 h-10 rounded-xl bg-sage-700 hover:bg-sage-600 flex items-center justify-center text-white transition">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+                                <a href="https://wa.me/919833343563?text=Hi%20Dt.%20Darshni%2C%20I%20would%20like%20to%20book%20an%20online%20consultation." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Darshni Dedhia" class="w-10 h-10 rounded-xl bg-emerald-600 hover:bg-emerald-500 flex items-center justify-center text-white transition">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Mitali -->
+                        <div class="bg-sage-800/90 border border-sage-700 p-5 rounded-2xl flex items-center justify-between gap-4">
+                            <div>
+                                <div class="text-xs text-sage-300 font-semibold uppercase">Dietitian & Co-Founder</div>
+                                <div class="font-bold text-lg text-white">Dt. Mitali Savla</div>
+                                <a href="tel:+919833909196" class="text-sage-200 hover:text-white text-sm font-medium">+91 98339 09196</a>
+                            </div>
+                            <div class="flex gap-2">
+                                <a href="tel:+919833909196" aria-label="Call Mitali Savla" class="w-10 h-10 rounded-xl bg-sage-700 hover:bg-sage-600 flex items-center justify-center text-white transition">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+                                <a href="https://wa.me/919833909196?text=Hi%20Dt.%20Mitali%2C%20I%20would%20like%20to%20book%20an%20online%20consultation." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Mitali Savla" class="w-10 h-10 rounded-xl bg-emerald-600 hover:bg-emerald-500 flex items-center justify-center text-white transition">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="bg-sage-800/90 border border-sage-700 p-5 rounded-2xl flex items-center justify-between gap-4">
+                            <div>
+                                <div class="text-xs text-sage-300 font-semibold uppercase">Official Email</div>
+                                <a href="mailto:healthhubdm@gmail.com" class="font-bold text-base sm:text-lg text-white hover:underline break-all">healthhubdm@gmail.com</a>
+                            </div>
+                            <a href="mailto:healthhubdm@gmail.com" aria-label="Email Health Hub" class="w-10 h-10 rounded-xl bg-sage-700 hover:bg-sage-600 flex items-center justify-center text-white transition flex-shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+
+                        <!-- Instagram -->
+                        <div class="bg-sage-800/90 border border-sage-700 p-5 rounded-2xl flex items-center justify-between gap-4">
+                            <div>
+                                <div class="text-xs text-sage-300 font-semibold uppercase">Instagram Community</div>
+                                <a href="https://www.instagram.com/healthhub_dt.darshni_mitali/" target="_blank" rel="noopener noreferrer" class="font-bold text-base text-white hover:underline">@healthhub_dt.darshni_mitali</a>
+                            </div>
+                            <a href="https://www.instagram.com/healthhub_dt.darshni_mitali/" target="_blank" rel="noopener noreferrer" aria-label="Health Hub Instagram" class="w-10 h-10 rounded-xl insta-gradient flex items-center justify-center text-white transition flex-shrink-0">
+                                <i class="fa-brands fa-instagram text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Consultation Inquiry Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white text-sage-900 rounded-3xl p-6 sm:p-10 shadow-2xl">
+                        <h3 class="font-serif text-2xl font-bold text-sage-900">Quick Consultation Inquiry</h3>
+                        <p class="text-xs sm:text-sm text-sage-600 mt-1">Send your health goal directly to us on WhatsApp or Email in one click.</p>
+
+                        <form id="consultation-form" onsubmit="handleConsultationSubmit(event)" class="mt-6 space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-sage-700 mb-1.5">Your Full Name *</label>
+                                    <input type="text" id="client-name" required placeholder="e.g., Priya Shah" class="w-full px-4 py-3 rounded-xl border border-sage-200 bg-sage-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sage-600 text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-sage-700 mb-1.5">City / Country *</label>
+                                    <input type="text" id="client-city" required placeholder="e.g., Mumbai, India" class="w-full px-4 py-3 rounded-xl border border-sage-200 bg-sage-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sage-600 text-sm">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-sage-700 mb-1.5">Primary Health Goal *</label>
+                                    <select id="client-goal" class="w-full px-4 py-3 rounded-xl border border-sage-200 bg-sage-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sage-600 text-sm font-medium">
+                                        <option value="PCOS Management">PCOS & Hormonal Balance</option>
+                                        <option value="Diabetes Management">Diabetes / Blood Sugar Control</option>
+                                        <option value="Gut Health Healing">Gut Health (Bloating / Acidity / IBS)</option>
+                                        <option value="Weight Management">Weight Management (Fat Loss / Weight Gain)</option>
+                                        <option value="General Holistic Nutrition">General Wellness & Family Nutrition</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-sage-700 mb-1.5">Connect With *</label>
+                                    <select id="preferred-dietitian" class="w-full px-4 py-3 rounded-xl border border-sage-200 bg-sage-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sage-600 text-sm font-medium">
+                                        <option value="919833343563">Dt. Darshni Dedhia (+91 98333 43563)</option>
+                                        <option value="919833909196">Dt. Mitali Savla (+91 98339 09196)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-sage-700 mb-1.5">Tell Us About Your Health Concern / Routine (Optional)</label>
+                                <textarea id="client-message" rows="3" placeholder="Share any specific goals, symptoms, or preferred consultation time..." class="w-full px-4 py-3 rounded-xl border border-sage-200 bg-sage-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sage-600 text-sm"></textarea>
+                            </div>
+
+                            <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                                <button type="submit" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 px-6 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-sm">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                    <span>Send Inquiry via WhatsApp</span>
+                                </button>
+                                <button type="button" onclick="sendConsultationEmail()" class="bg-sage-100 hover:bg-sage-200 text-sage-900 font-semibold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>Send via Email</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-sage-950 text-sage-300 py-12 border-t border-sage-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-sage-700 text-white flex items-center justify-center">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-lg font-bold text-white">Health Hub</span>
+                    <p class="text-xs text-sage-400">Founded by Dietitians Darshni Dedhia & Mitali Savla</p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-medium">
+                <a href="#about" class="hover:text-white transition">Founders</a>
+                <a href="#programs" class="hover:text-white transition">PCOS & Diabetes</a>
+                <a href="#instagram-feed" class="hover:text-white transition">Instagram Feed</a>
+                <a href="mailto:healthhubdm@gmail.com" class="hover:text-white transition">healthhubdm@gmail.com</a>
+            </div>
+
+            <div class="text-xs text-sage-400 text-center sm:text-right">
+                © <span id="current-year"></span> Health Hub. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Quick WhatsApp Button -->
+    <a href="#book-consultation" aria-label="Book Consultation" class="fixed bottom-5 right-5 z-40 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-xl flex items-center gap-2 transition hover:scale-105">
+        <i class="fa-brands fa-whatsapp text-xl"></i>
+        <span class="text-xs font-bold hidden sm:inline">Consult Online</span>
+    </a>
+
+    <!-- Modal: Add / Manage Instagram Posts (Local & Persistent) -->
+    <div id="insta-post-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between pb-4 border-b border-sage-200">
+                <div>
+                    <h3 class="font-serif text-xl font-bold text-sage-900">Add New Instagram Post</h3>
+                    <p class="text-xs text-sage-600">Publish a new reel or tip directly to your website feed</p>
+                </div>
+                <button onclick="togglePostModal()" class="w-9 h-9 rounded-full bg-sage-100 hover:bg-sage-200 text-sage-800 flex items-center justify-center">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="new-insta-form" onsubmit="handleNewPostSubmit(event)" class="py-5 space-y-4 text-sm">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-sage-700 mb-1">Post Category *</label>
+                    <select id="post-cat" class="w-full px-3.5 py-2.5 rounded-xl border border-sage-300 bg-sage-50 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-sage-600">
+                        <option value="pcos">🌸 PCOS & Hormones</option>
+                        <option value="gut">🌿 Gut Health Remedies</option>
+                        <option value="diabetes">🩸 Diabetes Tips</option>
+                        <option value="recipes">🥗 Healthy Swaps & Recipes</option>
+                        <option value="myths">💡 Myth vs. Fact</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-sage-700 mb-1">Post Type *</label>
+                    <select id="post-type" class="w-full px-3.5 py-2.5 rounded-xl border border-sage-300 bg-sage-50 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-sage-600">
+                        <option value="Reel">Reel Video</option>
+                        <option value="Carousel Post">Carousel Post</option>
+                        <option value="Myth vs Fact">Myth vs Fact</option>
+                        <option value="Client Story">Client Transformation</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-sage-700 mb-1">Catchy Headline *</label>
+                    <input type="text" id="post-title" required placeholder="e.g., 3 Morning Habits Wrecking Your Gut Health" class="w-full px-3.5 py-2.5 rounded-xl border border-sage-300 text-xs focus:outline-none focus:ring-2 focus:ring-sage-600">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-sage-700 mb-1">Instagram Caption & Hashtags *</label>
+                    <textarea id="post-caption" rows="3" required placeholder="Write your educational caption here..." class="w-full px-3.5 py-2.5 rounded-xl border border-sage-300 text-xs focus:outline-none focus:ring-2 focus:ring-sage-600"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-sage-700 mb-1">Key Takeaway Bullet Points (Comma separated)</label>
+                    <input type="text" id="post-highlights" placeholder="Acidity Relief, Morning Routine, No Supplements" class="w-full px-3.5 py-2.5 rounded-xl border border-sage-300 text-xs focus:outline-none focus:ring-2 focus:ring-sage-600">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-sage-700 mb-1">Direct Instagram Link (Optional)</label>
+                    <input type="url" id="post-link" placeholder="https://www.instagram.com/p/..." class="w-full px-3.5 py-2.5 rounded-xl border border-sage-300 text-xs focus:outline-none focus:ring-2 focus:ring-sage-600">
+                </div>
+
+                <div class="pt-3 flex gap-3">
+                    <button type="submit" class="flex-1 bg-sage-700 hover:bg-sage-800 text-white font-semibold py-3 rounded-xl transition text-xs shadow">
+                        Publish Post to Website
+                    </button>
+                    <button type="button" onclick="resetDefaultPosts()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-4 rounded-xl transition text-xs">
+                        Reset Default Posts
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script>
+        // Set Footer Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Default Curated Educational Posts for Health Hub (@healthhub_dt.darshni_mitali)
+        const defaultInstagramPosts = [
+            {
+                id: 1,
+                category: 'pcos',
+                type: 'Carousel Post',
+                badgeColor: 'bg-rose-100 text-rose-800',
+                icon: 'fa-solid fa-venus',
+                title: '5 Everyday Indian Superfoods to Balance PCOS Hormones Naturally',
+                caption: 'Struggling with irregular periods, chin hair, or stubborn weight? Stop cutting out carbs! Instead, include methi seeds, spearmint tea, halim seeds, and balanced protein in your daily meals. 🌿✨ #PCOSDiet #HealThroughFoods #HealthHub',
+                highlights: ['Seed Cycling Guide', 'Insulin Resistance Tips', 'No Fad Diets'],
+                likes: '248',
+                comments: '34',
+                link: 'https://www.instagram.com/healthhub_dt.darshni_mitali/'
+            },
+            {
+                id: 2,
+                category: 'gut',
+                type: 'Reel',
+                badgeColor: 'bg-emerald-100 text-emerald-800',
+                icon: 'fa-solid fa-leaf',
+                title: 'Morning Bloating & Acidity? Try This 3-Ingredient Gut Concoction',
+                caption: 'Waking up feeling heavy or dealing with post-meal bloating? Your gut microbiome needs soothing kitchen herbs—not antacids! Watch how jeera, ajwain & saunf water resets digestion. 🍵🌱 #GutHealth #BloatingRelief',
+                highlights: ['Acidity Relief', 'Morning Routine', 'Gut Microbiome'],
+                likes: '312',
+                comments: '49',
+                link: 'https://www.instagram.com/healthhub_dt.darshni_mitali/'
+            },
+            {
+                id: 3,
+                category: 'diabetes',
+                type: 'Carousel Post',
+                badgeColor: 'bg-blue-100 text-blue-800',
+                icon: 'fa-solid fa-droplet',
+                title: 'How to Eat Rice & Roti Without Spiking Your Blood Sugar',
+                caption: 'Having Diabetes does NOT mean giving up your staple meals! Learn the "Plate Sequencing Method"—start with fiber/salad, pair with dal/curd protein, and upgrade your atta with jowar or chana bran. 🩸🥣 #DiabetesReversal',
+                highlights: ['Blood Sugar Control', 'Smart Food Pairing', 'Low GI Swaps'],
+                likes: '195',
+                comments: '27',
+                link: 'https://www.instagram.com/healthhub_dt.darshni_mitali/'
+            },
+            {
+                id: 4,
+                category: 'recipes',
+                type: 'Reel',
+                badgeColor: 'bg-amber-100 text-amber-800',
+                icon: 'fa-solid fa-bowl-food',
+                title: 'High-Protein Vegetarian Evening Snacks Under 150 Calories',
+                caption: '4 PM to 6 PM is when cravings hit hardest! Swap fried namkeen and biscuits with roasted makhana chaat, moong dal chilla rolls, or spiced chana sundal for sustained energy and fat loss. 🥗✨ #HealthySnacking',
+                highlights: ['Weight Management', 'Vegetarian Protein', 'Quick Recipes'],
+                likes: '284',
+                comments: '41',
+                link: 'https://www.instagram.com/healthhub_dt.darshni_mitali/'
+            },
+            {
+                id: 5,
+                category: 'myths',
+                type: 'Myth vs Fact',
+                badgeColor: 'bg-purple-100 text-purple-800',
+                icon: 'fa-solid fa-lightbulb',
+                title: 'Myth vs. Fact: Do You Need Detox Juices & Green Tea for Weight Loss?',
+                caption: 'MYTH: Expensive detox teas melt belly fat. FACT: Your liver and kidneys detoxify your body naturally when nourished with whole foods, hydration, fiber, and sleep! Heal through foods, not fad diets. 💚 #NutritionFacts',
+                highlights: ['Busting Diet Myths', 'Sustainable Fat Loss', 'Real Food First'],
+                likes: '220',
+                comments: '31',
+                link: 'https://www.instagram.com/healthhub_dt.darshni_mitali/'
+            },
+            {
+                id: 6,
+                category: 'pcos',
+                type: 'Client Story',
+                badgeColor: 'bg-teal-100 text-teal-800',
+                icon: 'fa-solid fa-star',
+                title: 'Real Transformation: 8 Kgs Down & Regular Cycles Restored in 90 Days!',
+                caption: 'So proud of our online consultation client! With simple home-cooked meals, zero starvation, and consistent gut healing, she reversed her fatigue, lost inches, and got her periods on time naturally! 🌟🙌 #ClientWin',
+                highlights: ['Online Consultation', 'Home-Cooked Meals', 'Sustainable Results'],
+                likes: '365',
+                comments: '58',
+                link: 'https://www.instagram.com/healthhub_dt.darshni_mitali/'
+            }
+        ];
+
+        // Load posts from localStorage or default
+        function getStoredPosts() {
+            const saved = localStorage.getItem('healthhub_instagram_posts');
+            if (saved) {
+                try {
+                    return JSON.parse(saved);
+                } catch (e) {
+                    return defaultInstagramPosts;
+                }
+            }
+            return defaultInstagramPosts;
+        }
+
+        let currentFilter = 'all';
+
+        function renderInstagramPosts(filter = 'all') {
+            currentFilter = filter;
+            const posts = getStoredPosts();
+            const grid = document.getElementById('insta-feed-grid');
+            const filtered = filter === 'all'
+                ? posts
+                : posts.filter(post => post.category === filter);
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-12 text-center bg-cream rounded-3xl border border-sage-200">
+                        <p class="text-sage-700 font-medium">No posts found in this category yet.</p>
+                        <button onclick="togglePostModal()" class="mt-3 text-xs font-bold text-sage-800 underline">Add a post now</button>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(post => `
+                <article class="bg-cream rounded-3xl border border-sage-200 overflow-hidden shadow-sm flex flex-col justify-between card-hover">
+                    <div>
+                        <!-- Post Top Header -->
+                        <div class="p-4 bg-white border-b border-sage-100 flex items-center justify-between">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-8 h-8 rounded-full insta-gradient p-0.5">
+                                    <div class="w-full h-full bg-white rounded-full flex items-center justify-center text-[10px] font-bold text-sage-800">HH</div>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-sage-900 block leading-none">healthhub_dt.darshni_mitali</span>
+                                    <span class="text-[11px] text-sage-500">Dt. Darshni & Dt. Mitali</span>
+                                </div>
+                            </div>
+                            <span class="text-[11px] font-bold px-2.5 py-1 rounded-full ${post.badgeColor || 'bg-sage-100 text-sage-800'}">
+                                ${post.type}
+                            </span>
+                        </div>
+
+                        <!-- Visual Graphic Banner -->
+                        <div class="p-6 bg-gradient-to-br from-sage-100 via-cream to-sage-50 border-b border-sage-100 relative">
+                            <div class="w-11 h-11 rounded-2xl bg-white shadow-sm text-sage-700 flex items-center justify-center text-lg mb-3">
+                                <i class="${post.icon || 'fa-solid fa-seedling'}"></i>
+                            </div>
+                            <h3 class="font-serif text-lg font-bold text-sage-900 leading-snug">
+                                ${post.title}
+                            </h3>
+                            <div class="flex flex-wrap gap-1.5 mt-4">
+                                ${(post.highlights || []).map(tag => `
+                                    <span class="text-[11px] font-semibold bg-white/90 text-sage-700 px-2.5 py-0.5 rounded-md border border-sage-200/70">
+                                        ✓ ${tag}
+                                    </span>
+                                `).join('')}
+                            </div>
+                        </div>
+
+                        <!-- Post Caption -->
+                        <div class="p-5">
+                            <p class="text-xs sm:text-sm text-sage-700 leading-relaxed">
+                                ${post.caption}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Post Footer Link -->
+                    <div class="px-5 py-3.5 bg-white border-t border-sage-100 flex items-center justify-between text-xs">
+                        <div class="flex items-center gap-4 text-sage-600 font-semibold">
+                            <span><i class="fa-regular fa-heart text-rose-500 mr-1"></i> ${post.likes || '142'}</span>
+                            <span><i class="fa-regular fa-comment text-sage-500 mr-1"></i> ${post.comments || '18'}</span>
+                        </div>
+                        <a href="${post.link || 'https://www.instagram.com/healthhub_dt.darshni_mitali/'}" target="_blank" rel="noopener noreferrer" class="font-bold text-sage-700 hover:text-sage-900 flex items-center gap-1">
+                            <span>View on Instagram</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function filterInstaPosts(category) {
+            document.querySelectorAll('.insta-filter-btn').forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.className = 'insta-filter-btn bg-sage-700 text-white text-xs font-semibold px-4 py-2 rounded-full transition';
+                } else {
+                    btn.className = 'insta-filter-btn bg-white border border-sage-200 text-sage-800 hover:bg-sage-100 text-xs font-semibold px-4 py-2 rounded-full transition';
+                }
+            });
+            renderInstagramPosts(category);
+        }
+
+        // Toggle Post Creation Modal
+        function togglePostModal() {
+            const modal = document.getElementById('insta-post-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        // Handle Form Submission for New Post
+        function handleNewPostSubmit(event) {
+            event.preventDefault();
+            const category = document.getElementById('post-cat').value;
+            const type = document.getElementById('post-type').value;
+            const title = document.getElementById('post-title').value.trim();
+            const caption = document.getElementById('post-caption').value.trim();
+            const highlightsRaw = document.getElementById('post-highlights').value.trim();
+            const link = document.getElementById('post-link').value.trim() || 'https://www.instagram.com/healthhub_dt.darshni_mitali/';
+
+            let icon = 'fa-solid fa-seedling';
+            let badgeColor = 'bg-sage-100 text-sage-800';
+            if (category === 'pcos') { icon = 'fa-solid fa-venus'; badgeColor = 'bg-rose-100 text-rose-800'; }
+            else if (category === 'gut') { icon = 'fa-solid fa-leaf'; badgeColor = 'bg-emerald-100 text-emerald-800'; }
+            else if (category === 'diabetes') { icon = 'fa-solid fa-droplet'; badgeColor = 'bg-blue-100 text-blue-800'; }
+            else if (category === 'recipes') { icon = 'fa-solid fa-bowl-food'; badgeColor = 'bg-amber-100 text-amber-800'; }
+            else if (category === 'myths') { icon = 'fa-solid fa-lightbulb'; badgeColor = 'bg-purple-100 text-purple-800'; }
+
+            const highlights = highlightsRaw ? highlightsRaw.split(',').map(h => h.trim()) : ['Heal Through Foods', 'Online Consultation'];
+
+            const newPost = {
+                id: Date.now(),
+                category,
+                type,
+                badgeColor,
+                icon,
+                title,
+                caption,
+                highlights,
+                likes: Math.floor(Math.random() * 200) + 120,
+                comments: Math.floor(Math.random() * 40) + 15,
+                link
+            };
+
+            const posts = getStoredPosts();
+            posts.unshift(newPost);
+            localStorage.setItem('healthhub_instagram_posts', JSON.stringify(posts));
+
+            document.getElementById('new-insta-form').reset();
+            togglePostModal();
+            renderInstagramPosts(currentFilter);
+        }
+
+        // Reset to default
+        function resetDefaultPosts() {
+            if (confirm('Reset to the official Health Hub starter posts?')) {
+                localStorage.removeItem('healthhub_instagram_posts');
+                renderInstagramPosts('all');
+                togglePostModal();
+            }
+        }
+
+        // Pre-select program in booking form and scroll down
+        function selectProgramForBooking(programName) {
+            const selectEl = document.getElementById('client-goal');
+            if (selectEl) {
+                selectEl.value = programName;
+            }
+            document.getElementById('book-consultation').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Handle WhatsApp Consultation Form Submission
+        function handleConsultationSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('client-name').value.trim();
+            const city = document.getElementById('client-city').value.trim();
+            const goal = document.getElementById('client-goal').value;
+            const phone = document.getElementById('preferred-dietitian').value;
+            const message = document.getElementById('client-message').value.trim();
+
+            const dietitianName = phone === '919833343563' ? 'Dt. Darshni' : 'Dt. Mitali';
+            let text = `Hello ${dietitianName} (Health Hub) 🌿,\n\nI would like to book an Online Nutrition Consultation.\n\n*Name:* ${name}\n*Location:* ${city}\n*Health Goal:* ${goal}`;
+            if (message) {
+                text += `\n*Details:* ${message}`;
+            }
+
+            const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        // Handle Email Consultation Form Submission
+        function sendConsultationEmail() {
+            const name = document.getElementById('client-name').value.trim() || 'Prospective Client';
+            const city = document.getElementById('client-city').value.trim() || 'Not specified';
+            const goal = document.getElementById('client-goal').value;
+            const message = document.getElementById('client-message').value.trim();
+
+            const subject = `Online Consultation Inquiry - ${goal} (${name})`;
+            const body = `Hello Dt. Darshni & Dt. Mitali,\n\nI would like to inquire about an online nutrition consultation at Health Hub.\n\nName: ${name}\nLocation: ${city}\nPrimary Goal: ${goal}\nAdditional Notes: ${message || 'None'}\n\nThank you!`;
+
+            window.location.href = `mailto:healthhubdm@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        // Initial Render
+        renderInstagramPosts('all');
+    </script>
+</body>
+</html>
